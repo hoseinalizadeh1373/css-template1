@@ -19,13 +19,17 @@
       height: 100vh;
       background-color: yellow;
   }
+  a{
+z-index: 10;
+color: red;
+  }
 .container{
+    z-index: 0;
     position: relative;
      height: 100vh;
      width: 100%;
      margin: 0;
-    
-     border: 2px solid black;
+   
      background: linear-gradient(to top, #000 50%, #fff 50%);
      background-size: 100% 200%;
      background-position: top left;
@@ -44,11 +48,11 @@
     border-radius: 40px;
     animation: fill2 2s ease-in-out infinite;
 } */
-.container:hover{
+/* .container:hover{
     border: 2px solid limegreen;
     background-position: bottom left;
     color: #fff;
-}
+} */
 .ball{
     position: absolute;
     left: 50%;
@@ -59,12 +63,13 @@
     margin-left: 2px;
     margin-right: 2px;
     background-color: black;
-    border: 1px solid black;
+    
     border-radius: 50px;
     /* transition: height ease-out 2s ; */
     animation: ball forwards 3s ;
     position: relative;
     overflow: hidden;
+    z-index: -10;
 }
 /* .ball::before {
    content: '';
