@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    letter-spacing: 0;
+  }
+  body,html{
+      margin: 0;
+      background-color: aqua;
+       height: 100vh; 
+      
+   
+  }
+  .cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+      height: 100vh;
+      background-color: yellow;
+  }
+.container{
+    position: relative;
+     height: 100vh;
+     width: 100%;
+     margin: 0;
+    
+     border: 2px solid black;
+     background: linear-gradient(to top, #000 50%, #fff 50%);
+     background-size: 100% 200%;
+     background-position: top left;
+     transition: all .5s ease-out;
+    transition-delay: 3s;
+    overflow: hidden;
+}
+/* .container::before{
+    content: '';
+    position: absolute;
+    width: 1100px;
+    height: 1100px;
+    background: violet;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40px;
+    animation: fill2 2s ease-in-out infinite;
+} */
+.container:hover{
+    border: 2px solid limegreen;
+    background-position: bottom left;
+    color: #fff;
+}
+.ball{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    /* margin-top: 15vh; */
+    width: 50px;
+    height: 50px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 50px;
+    /* transition: height ease-out 2s ; */
+    animation: ball forwards 3s ;
+    position: relative;
+    overflow: hidden;
+}
+/* .ball::before {
+   content: '';
+   position: absolute;
+   width: 400px;
+   height: 400px;
+   background: violet;
+   left: 50%;
+   transform: translateX(-50%);
+   border-radius: 40px;
+   animation: fill 5s ease-in-out infinite;
+} */
+/* @keyframes fill{
+    from{
+        top: 250px;
+        transform: translateX(-50%)rotate(0deg);
+    }
+    to{
+        top: -50px;
+        transform: translateX(-50%)rotate(360deg);
+    }
+}
+@keyframes fill2{
+    from{
+        top: 500px;
+        transform: translateX(-50%)rotate(0deg);
+    }
+    to{
+        top: -50px;
+        transform: translateX(-50%);
+    }
+} */
+@keyframes ball{
+0%{
+transform: translateY(0px) scale(3);
+
+/* width: 20vh; */
+/* transform: scaleX(0.1); */
+}
+
+50%{
+
+    transform: translateY(88vh)scale(0);
+/* width: 80vh; */
+/* transform: scaleX(0.9); */
+}
+
+100%{
+    /* transform: scaleX(8); */
+    /* transform: translateY(88vh); */
+    transform: translateY(88vh)scale(100);
+}
+    
+}
+    @keyframes conr{
+        0%{  background-position: to top;
+            color: red;}
+            50%{  background-position: bottom left;
+                color:red;}
+    }
